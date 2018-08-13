@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ÄlytaloMVC.Models.Talo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TalonNimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sauna.SaunanNimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sauna.SaunanTila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sauna.SaunanNykyLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaloLampo.HuoneenNimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaloLampo.TalonNykyLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaloLampo.TalonTavoiteLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valo.ValonNimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valo.ValonTila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valo.ValonMaara)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TalonNimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sauna.SaunanNimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sauna.SaunanTila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sauna.SaunanNykyLampotila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaloLampo.HuoneenNimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaloLampo.TalonNykyLampotila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaloLampo.TalonTavoiteLampotila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valo.ValonNimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valo.ValonTila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valo.ValonMaara)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TaloID }) |
+            @Html.ActionLink("Uusi sauna", "UusiSauna", new { id = item.TaloID }) |
+            @Html.ActionLink("Uusi valo", "UusiValo", new { id = item.TaloID }) |
+            @Html.ActionLink("Uusi huoneen lämmitys", "UusiHuone", new { id = item.TaloID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TaloID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TaloID })
+        </td>
+    </tr>
+}
+
+</table>

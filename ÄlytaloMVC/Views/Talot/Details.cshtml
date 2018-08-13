@@ -1,0 +1,50 @@
+﻿@model ÄlytaloMVC.Models.Talo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Talo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TalonNimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TalonNimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sauna.SaunanNimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sauna.SaunanNimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaloLampo.HuoneenNimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaloLampo.HuoneenNimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valo.ValonNimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valo.ValonNimi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TaloID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
